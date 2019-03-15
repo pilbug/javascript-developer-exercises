@@ -22,11 +22,11 @@ before the next comment block.
 */
 // PLACE YOUR CODE BELOW
 let i;
-wordList = "";
+wordList = [];
 for(i = 0; i < words.length; i++) {
-	wordList += words[i].slice(1, 3) + ", ";
+	wordList.push(words[i].slice(1, 3));
 }
-wordList = wordList.slice(0, wordList.length-2);
+wordList = wordList.join(", ");
 // PLACE YOUR CODE ABOVE
 /*
 When run with "node 1_strings.js" you should see the following on
