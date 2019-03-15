@@ -9,8 +9,11 @@ let statement = 'Penn Mutual is a company that sells life insurance'
 
 function reverseLetters(str) {
   // PLACE YOUR CODE ABOVE
-
-
+	let strArr = str.split(" ");
+	for(i in strArr) {
+		strArr[i] = strArr[i].split("").reverse().join("");	
+	}
+	return strArr.join(" ");
   // PLACE YOUR CODE BELOW
 }
 

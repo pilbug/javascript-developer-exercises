@@ -11,7 +11,17 @@ function paintMixer(color1, color2) {
   The order of the params should not matter.
   */
   // PLACE YOUR CODE BELOW
-
+	var colors = [color1, color2].sort();
+	switch(colors[0]) {
+		case 'blue':
+			if(colors[1]==='red') { return 'purple'; }
+			else if(colors[1]==='yellow') { return 'green'; }
+			break;
+		case 'green':
+			if(colors[1]==='red') { return 'brown'; }
+			break;
+	}
+	return 'unknown';
   // PLACE YOUR CODE ABOVE
 }
 

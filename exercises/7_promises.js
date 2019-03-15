@@ -16,7 +16,23 @@ to the console, waits 2 more seconds and then writes
 console.log('Go!')
 
 // PLACE YOUR CODE BELOW
+let promise1 = wait(1);
 
+promise1.then(function(result) {
+  console.log("I waited 1 second");
+  createPromise2();
+}, function(err) {
+  console.log("Promise 1 broken");
+});
+
+let promise2;
+function createPromise2() {
+	promise2 = wait(2);
+	promise2.then(
+		function(result){ console.log("I waited 2 more seconds"); }, 
+		function(err){ console.log("Promise 2 broken"); }
+	);
+}
 // PLACE YOUR CODE ABOVE
 /*
 You console output should look like the following AND wait the

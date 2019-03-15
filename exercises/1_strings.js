@@ -21,7 +21,12 @@ Place your code that does all of this below this comment block, and
 before the next comment block.
 */
 // PLACE YOUR CODE BELOW
-
+let i;
+wordList = "";
+for(i = 0; i < words.length; i++) {
+	wordList += words[i].slice(1, 3) + ", ";
+}
+wordList = wordList.slice(0, wordList.length-2);
 // PLACE YOUR CODE ABOVE
 /*
 When run with "node 1_strings.js" you should see the following on
